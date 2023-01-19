@@ -44,10 +44,15 @@ jobs:
         run: yarn build
 
       - name: 🚀 部署中
-        uses: peaceiris/actions-gh-pages@v3
+        # run: |
+        #   git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        #   npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           # 部署到 gh-pages 分支
-          publish_branch: gh-pages
+          target_branch: gh-pages
           # 部署目录为Vite项目的默认输出目录
-          publish_dir: ./dist
+          build_dir: ./dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_REPOSITORY: admin
