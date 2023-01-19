@@ -44,7 +44,7 @@ jobs:
         run: yarn build
 
       - name: Deploy to GitHub Pages
-        uses: phyark/admin
+        uses: phyark/admin@v0.0.0
         with:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
