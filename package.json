@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://phyark.github.io//admin",
   "dependencies": {
     "vue": "^3.2.45"
   },
