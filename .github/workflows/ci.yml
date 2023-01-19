@@ -44,12 +44,13 @@ jobs:
         run: yarn build
 
       - name: 🚀 部署中
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           # 部署到 gh-pages 分支
-          target_branch: gh-pages
+          publish_branch: gh-pages
           # 部署目录为Vite项目的默认输出目录
-          build_dir: ./dist
+          publish_dir: ./dist
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           GITHUB_REPOSITORY: admin
