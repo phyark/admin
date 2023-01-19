@@ -44,9 +44,7 @@ jobs:
         run: yarn build
 
       - name: 🚀 部署中
-        # run: |
-        #   git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        #   npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        uses: crazy-max/ghaction-github-pages@v2
         with:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
