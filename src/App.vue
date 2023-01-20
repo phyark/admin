@@ -1,26 +1,26 @@
-<!--
- * @Description: 这是***页面（组件）
- * @Date: 2023-01-19 16:22:06
- * @Author: liukunjia
- * @LastEditors: liukunjia
- * @LastEditTime: 2023-01-20 11:24:59
--->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HelloWorld from './components/HelloWorld.vue'
+</script>
 
 <template>
-	<h1>后台管理系统</h1>
+  <div>
+    <img src="/vite.svg" class="logo" alt="Vite logo" />
+  </div>
+  <HelloWorld msg="后台管理系统" />
 </template>
 
 <style scoped>
 .logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
 }
+
 .logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
-	filter: drop-shadow(0 0 2em #42b883aa);
+  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
