@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <RouterView></RouterView>
+  <h1>页面已失效</h1>
 </template>
